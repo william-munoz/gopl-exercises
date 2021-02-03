@@ -1,5 +1,5 @@
-// ex10 は、URL を並行に取り出して時間と大きさを表示することを、2 回行います。
-// また、取り出しによって得られた内容を、ファイルに保存します。
+// ex10 Will retrieve the URLs in parallel and display the time and size twice.
+// It also saves the contents obtained by the extraction to a file.
 package main
 
 import (
@@ -15,8 +15,8 @@ func main() {
 	fetchToDir(os.Args[1:], "out/2")
 }
 
-// fetchToDir は、URL を並行に取り出して、時間を表示します。
-// また、取り出しによって得られた内容を、指定されたディレクトリに保存します。
+// fetchToDir Extracts URLs in parallel to display the time.
+// It also saves the contents obtained by the retrieval in the specified directory.
 func fetchToDir(urls []string, dirName string) {
 	start := time.Now()
 	ch := make(chan string)
@@ -35,8 +35,8 @@ func fetchToDir(urls []string, dirName string) {
 	fmt.Printf("%.2fs elapsed\n", time.Since(start).Seconds())
 }
 
-// fetch は、URL を取り出して、時間と大きさを表示します。
-// また、取り出しによって得られた内容を、与えられた writer に書き込みます。
+// fetch Extracts the URL and displays the time and size.
+// It also writes the content obtained by the retrieval to the given writer.
 func fetch(url string, writer io.Writer, ch chan<- string) {
 	start := time.Now()
 	resp, err := http.Get(url)

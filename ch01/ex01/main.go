@@ -1,4 +1,4 @@
-// ex01 は、それを起動したコマンド名とコマンドライン引数を表示します。
+// ex01 Displays the name of the command that invoked it and the command line arguments.
 package main
 
 import (

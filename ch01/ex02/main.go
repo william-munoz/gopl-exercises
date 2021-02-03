@@ -1,4 +1,4 @@
-// ex02 は、個々のコマンドライン引数のインデックスと値の組を 1 行ごとに表示します。
+// ex02 Displays the index/value pairs of individual command line arguments line by line.
 package main
 
 import (

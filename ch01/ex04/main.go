@@ -1,5 +1,5 @@
-// ex04 は、標準入力または指定されたファイルに 2 回以上現れた行の数とそのテキストを表示します。
-// ファイルが指定された場合は、重複した行のそれぞれが含まれていた全てのファイル名を表示します。
+// ex04 Displays the number of lines that appear more than once in a standard input or specified file and their text.
+// If a file is specified, all filenames that contained each of the duplicate lines will be displayed.
 package main
 
 import (
@@ -32,7 +32,7 @@ func main() {
 	}
 }
 
-// countLines は、入力を 1 行ずつ読み込み、出現した行の回数と入力の名前を記録します。
+// countLines Reads the input line by line and records the number of lines that occur and the name of the input.
 func countLines(f *os.File, counts map[string]int, occurrences map[string][]string) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
@@ -41,8 +41,8 @@ func countLines(f *os.File, counts map[string]int, occurrences map[string][]stri
 	}
 }
 
-// appendAsSet は、与えられた文字列の配列 set に、与えられた文字列 str を追加します。
-// ただし、set が str を既に含んでいる場合は、str を追加しません。
+// appendAsSet Adds the given string str to the given string array set.
+// However, if set already contains str, do not add str.
 func appendAsSet(set []string, str string) []string {
 	if !includes(set, str) {
 		return append(set, str)
@@ -50,7 +50,7 @@ func appendAsSet(set []string, str string) []string {
 	return set
 }
 
-// includes は、与えられた文字列の配列 array が、与えられた文字列 str を含んでいるかどうかを返します。
+// includes Returns whether the array of the given strings contains the given string str.
 func includes(array []string, str string) bool {
 	for _, value := range array {
 		if value == str {

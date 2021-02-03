@@ -1,4 +1,4 @@
-// Package ex03 は、コマンドライン引数の表示を行います。
+// Package ex03 Displays line arguments.
 package ex03
 
 import (
@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Echo1 は、for ループを用いてコマンドライン引数を表示します。
+// Echo1 Uses a for loop to display command line arguments.
 func Echo1() {
 	var s, sep string
 	for i := 1; i < len(os.Args); i++ {
@@ -16,7 +16,7 @@ func Echo1() {
 	// fmt.Println(s)
 }
 
-// Echo2 は、for ループと range を用いてコマンドライン引数を表示します。
+// Echo2 Displays command line arguments using a for loop and range.
 func Echo2() {
 	s, sep := "", ""
 	for _, arg := range os.Args[1:] {
@@ -26,7 +26,7 @@ func Echo2() {
 	// fmt.Println(s)
 }
 
-// Echo3 は、strings.Join を用いてコマンドライン引数を表示します。
+// Echo3 Displays command line arguments using strings.Join.
 func Echo3() {
 	strings.Join(os.Args[1:], " ")
 	// fmt.Println(strings.Join(os.Args[1:], " "))

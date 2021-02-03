@@ -1,4 +1,4 @@
-// ex11 は、URL を並行に取り出して、時間と大きさを表示します。
+// ex11 Extracts URLs in parallel to display the time and size.
 package main
 
 import (

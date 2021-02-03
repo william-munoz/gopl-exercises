@@ -1,4 +1,4 @@
-// ex09 は、URL にある内容と、HTTP ステータスコードを表示します。
+// ex09 Displays what is in the URL and the HTTP status code.
 package main
 
 import (

@@ -1,4 +1,4 @@
-// ex06 は、グレースケールのグラデーションを用いた、リサジュー図形の GIF アニメーションを生成します。
+// ex06 Generates a GIF animation of a Lissajous figure with a grayscale gradient.
 package main
 
 import (
@@ -45,7 +45,7 @@ func lissajous(out io.Writer) {
 	gif.EncodeAll(out, &anim) // NOTE: ignoring encoding errors
 }
 
-// getPalette は、グレースケールのパレットを生成します。
+// getPalette Produces a grayscale palette.
 func getPalette(colorRes int) []color.Color {
 	if colorRes < 1 {
 		return []color.Color{}
@@ -58,7 +58,7 @@ func getPalette(colorRes int) []color.Color {
 	return palette
 }
 
-// getGrayIndex は、与えられた明度に対応する、パレットのインデックスを返します。
+// getGrayIndex Returns the index of the palette, which corresponds to the given brightness.
 func getGrayIndex(brightness float64, palette []color.Color) uint8 {
 	if brightness < 0 || brightness > 1 {
 		return 0

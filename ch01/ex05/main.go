@@ -1,4 +1,4 @@
-// ex05 は、黒い背景と緑の線を用いて、ランダムなリサジュー図形の GIF アニメーションを生成します。
+// ex05 Generates a random Lissajous GIF animation with a black background and green lines.
 package main
 
 import (
