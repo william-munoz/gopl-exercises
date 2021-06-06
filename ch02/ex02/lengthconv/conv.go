@@ -1,8 +1,8 @@
-// Package lengthconv は、フィートとメートルの長さの計算を行います。
+// Package lengthconv calculates the length of feet and meters.
 package lengthconv
 
-// FootToMeter は、フィートの長さをメートルの長さに変換します。
+// FootToMeter converts foot lengths to metric lengths.
 func FootToMeter(f Foot) Meter { return Meter(float64(f) / FootPerMeter) }
 
-// MeterToFoot は、メートルの長さをフィートの長さに変換します。
+// MeterToFoot converts the length of a meter to the length of a foot.
 func MeterToFoot(m Meter) Foot { return Foot(float64(m) * FootPerMeter) }

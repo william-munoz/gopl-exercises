@@ -1,4 +1,4 @@
-// Package conv は、いくつかの単位変換を行います。
+// Package conv does some unit conversion.
 package conv
 
 import (
@@ -12,7 +12,7 @@ import (
 	"github.com/kdama/gopl/ch02/ex02/tempconv"
 )
 
-// Parse は、値とその単位からなる与えられた文字列を解釈して、その値と単位を返します。
+// Parse interprets a given string of values and their units and returns the values and units.
 func Parse(str string) (float64, string, error) {
 	r := regexp.MustCompile("^([-+]?\\d*\\.?\\d+(?:[eE][-+]?\\d+)?)(.+)$")
 	result := r.FindStringSubmatch(str)
@@ -31,7 +31,7 @@ func Parse(str string) (float64, string, error) {
 	return value, unit, nil
 }
 
-// Convert は、与えられた値と単位を結合した文字列と、関連する別の単位に変換した場合の文字列を返します。
+// Convert returns a string that combines a given value and units, and the string that would have been converted to another related unit.
 func Convert(value float64, unit string) (string, string, error) {
 	lowerUnit := strings.ToLower(unit)
 

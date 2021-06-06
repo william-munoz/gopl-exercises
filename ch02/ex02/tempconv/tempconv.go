@@ -1,16 +1,16 @@
-// Package tempconv は、摂氏と華氏の温度計算を行います。
+// Package tempconv calculates temperatures in Celsius and Fahrenheit.
 package tempconv
 
 import "fmt"
 
-// Celsius は、摂氏の温度を表します。
+// Celsius represents the temperature in Celsius.
 type Celsius float64
 
-// Fahrenheit は、華氏の温度を表します。
+// Fahrenheit represents the temperature in Fahrenheit.
 type Fahrenheit float64
 
 const (
-	// AbsoluteZeroC は、絶対零度です。
+	// AbsoluteZeroC is absolute zero.
 	AbsoluteZeroC Celsius = -273.15
 )
 

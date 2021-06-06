@@ -1,8 +1,8 @@
-// Package massconv は、ポンドとキログラムの重さの計算を行います。
+// Package massconv calculates the weight of pounds and kilograms.
 package massconv
 
-// PoundToKilogram は、ポンドの重さをキログラムの重さに変換します。
+// PoundToKilogram converts the weight of a pound to the weight of a kilogram.
 func PoundToKilogram(p Pound) Kilogram { return Kilogram(float64(p) / PoundPerKilogram) }
 
-// KilogramToPound は、キログラムの重さをポンドの重さに変換します。
+// KilogramToPound converts the weight of a kilogram to the weight of a pound.
 func KilogramToPound(k Kilogram) Pound { return Pound(float64(k) * PoundPerKilogram) }

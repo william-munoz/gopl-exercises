@@ -1,4 +1,4 @@
-// Package popcount は、ポピュレーションカウントを返します。
+// Package popcount returns the population count.
 package popcount
 
 var pc [256]byte
@@ -9,7 +9,7 @@ func init() {
 	}
 }
 
-// TablePopCount は、テーブル参照を用いて x のポピュレーションカウントを返します。
+// TablePopCount returns the population count of x using a table reference.
 func TablePopCount(x uint64) int {
 	return int(pc[byte(x>>(0*8))] +
 		pc[byte(x>>(1*8))] +
@@ -21,7 +21,7 @@ func TablePopCount(x uint64) int {
 		pc[byte(x>>(7*8))])
 }
 
-// LSBPopCount は、LSB へのビット演算を用いて x のポピュレーションカウントを返します。
+// LSBPopCount returns the population count of x using bitwise operations on the LSB.
 func LSBPopCount(x uint64) int {
 	count := 0
 	for x != 0 {

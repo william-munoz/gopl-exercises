@@ -1,16 +1,16 @@
-// Package lengthconv は、フィートとメートルの長さの計算を行います。
+// Package lengthconv calculates the length of feet and meters.
 package lengthconv
 
 import "fmt"
 
-// Foot は、フィートの長さを表します。
+// Foot represents the length of the foot.
 type Foot float64
 
-// Meter は、メートルの長さを表します。
+// Meter represents the length of the meter.
 type Meter float64
 
 const (
-	// FootPerMeter は、メートルあたりフィートの値です。
+	// FootPerMeter is the value of feet per meter.
 	FootPerMeter float64 = 0.3048
 )
 

@@ -1,16 +1,16 @@
-// Package massconv は、ポンドとキログラムの重さの計算を行います。
+// Package massconv calculates the weight of pounds and kilograms.
 package massconv
 
 import "fmt"
 
-// Pound は、ポンドの重さを表します。
+// Pound represents the weight of a pound.
 type Pound float64
 
-// Kilogram は、キログラムの重さを表します。
+// Kilogram represents the weight of a kilogram.
 type Kilogram float64
 
 const (
-	// PoundPerKilogram は、キログラムあたりポンドの値です。
+	// PoundPerKilogram is the value of pounds per kilogram.
 	PoundPerKilogram float64 = 0.45359237
 )
 

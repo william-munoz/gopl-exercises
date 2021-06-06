@@ -1,6 +1,6 @@
 # `testall.bash`
 
-ベンチマークの結果は、次の通りです。
+The benchmark results are as follows.
 
 ```
 BenchmarkTablePopCount-2        2000000000               0.60 ns/op
