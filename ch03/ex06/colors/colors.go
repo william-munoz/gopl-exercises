@@ -1,11 +1,11 @@
-// Package colors は、色に関する処理を行います。
+// Package colors do color-related processing.
 package colors
 
 import (
 	"image/color"
 )
 
-// GetAverageColor は、与えられた複数の色の、平均の色を返します。
+// GetAverageColor returns the average color of a given number of colors.
 func GetAverageColor(colors []color.Color) color.Color {
 	if len(colors) < 1 {
 		return nil

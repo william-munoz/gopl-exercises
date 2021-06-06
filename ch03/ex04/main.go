@@ -1,14 +1,14 @@
-// ch03/ex04 は、URL からパラメータ値を読み込んで、対応する 3-D 面の SVG を生成するサーバです。
-// URL クエリを通して、以下のパラメータに対応します。
-// - width       : キャンバスの幅
-// - height      : キャンバスの高さ
-// - cells       : 格子のます目の数
-// - xyrange     : 軸の範囲 (-xyrange .. xyrange)
-// - xyscale     : x 単位および y 単位当たりの画素数
-// - zscale      : z 単位当たりの画素数
-// - angle       : x, y 軸の角度
-// - topColor    : 頂点の色 (例: ff0000)
-// - bottomColor : 谷の色 (例: 0000ff)
+// ch03 / ex04 is a server that reads parameter values from a URL and generates the corresponding 3-D plane SVG.
+// Corresponds to the following parameters through URL queries:
+// - width       : Canvas width
+// - height      : Canvas height
+// - cells       : Number of grids
+// - xyrange     : Axis range (-xyrange .. xyrange)
+// - xyscale     : Number of pixels per x and y units
+// - zscale      : Number of pixels per z unit
+// - angle       : x, y axis angles
+// - topColor    : Vertex color (eg ff0000)
+// - bottomColor : Valley color (eg 0000ff)
 package main
 
 import (
@@ -48,8 +48,8 @@ func main() {
 	return
 }
 
-// parseFirstFloat64OrDefault は、与えられた文字列の配列のうち最初の要素を、整数にパースして返します。
-// パース可能な要素が 1 個もない場合は、与えられたデフォルト値を返します。
+// parseFirstFloat64OrDefault parses and returns the first element of the given array of strings to an integer.
+// If none of the elements can be parsed, it returns the given default value.
 func parseFirstIntOrDefault(array []string, defaultValue int) int {
 	if len(array) < 1 {
 		return defaultValue
@@ -61,8 +61,8 @@ func parseFirstIntOrDefault(array []string, defaultValue int) int {
 	return value
 }
 
-// parseFirstFloat64OrDefault は、与えられた文字列の配列のうち最初の要素を、浮動小数点数にパースして返します。
-// パース可能な要素が 1 個もない場合は、与えられたデフォルト値を返します。
+// parseFirstFloat64OrDefault parses and returns the first element of the given array of strings to a floating point number.
+// If none of the elements can be parsed, it returns the given default value.
 func parseFirstFloat64OrDefault(array []string, defaultValue float64) float64 {
 	if len(array) < 1 {
 		return defaultValue
@@ -74,8 +74,8 @@ func parseFirstFloat64OrDefault(array []string, defaultValue float64) float64 {
 	return value
 }
 
-// parseFirstColorOrDefault は、与えられた文字列の配列のうち最初の要素を、color.Color にパースして返します。
-// パース可能な要素が 1 個もない場合は、与えられたデフォルト値を返します。
+// parseFirstColorOrDefault parses and returns the first element of the given array of strings in color.Color.
+// If none of the elements can be parsed, it returns the given default value.
 func parseFirstColorOrDefault(array []string, defaultValue color.Color) color.Color {
 	if len(array) < 1 {
 		return defaultValue

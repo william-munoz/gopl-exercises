@@ -1,4 +1,4 @@
-// ch03/ex10 は、再帰呼び出しをせずに、文字列にカンマを挿入します。
+// ch03 / ex10 inserts a comma in the string without making a recursive call.
 package main
 
 import (
@@ -14,7 +14,7 @@ func main() {
 	}
 }
 
-// comma は、再帰呼び出しをせずに、文字列にカンマを挿入します。
+// comma inserts a comma into the string without making a recursive call.
 func comma(s string) string {
 	var buf bytes.Buffer
 	i := (3 - utf8.RuneCountInString(s)%3) % 3

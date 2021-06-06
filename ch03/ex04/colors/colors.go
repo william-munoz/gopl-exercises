@@ -1,4 +1,4 @@
-// Package colors は、色に関する処理を行います。
+// Package colors do color-related processing.
 package colors
 
 import (
@@ -10,8 +10,8 @@ import (
 	"github.com/kdama/gopl/ch03/ex04/floats"
 )
 
-// GetIntermediateColor は、n (0 <= n <= 1) の値に対応する、color0 と color1 の間の色を返します。
-// n が 0 以下のときは、color0 を返します。n が 1 以上のときは、color1 を返します。
+// GetIntermediateColor returns the color between color0 and color1 that corresponds to the value of n (0 <= n <= 1).
+// Returns color0 if n is less than or equal to 0. Returns color1 if n is greater than or equal to 1.
 func GetIntermediateColor(n float64, color0, color1 color.Color) color.Color {
 	if n <= 0 || !floats.IsFinite(n) {
 		return color0
@@ -31,7 +31,7 @@ func GetIntermediateColor(n float64, color0, color1 color.Color) color.Color {
 	return color.RGBA{r, g, b, a}
 }
 
-// ColorToString は、color.Color に対応する、#RRGGBB 形式の文字列を返します。
+// ColorToString returns a string in #RRGGBB format that corresponds to color.Color.
 func ColorToString(c color.Color) string {
 	r, g, b, _ := c.RGBA()
 
@@ -42,7 +42,7 @@ func ColorToString(c color.Color) string {
 	return fmt.Sprintf("#%s%s%s", rr, gg, bb)
 }
 
-// ColorFromString は、RRGGBB または #RRGGBB 形式の文字列に対応する、color.Color を返します。
+// ColorFromString returns color.Color, which corresponds to a string in the format RRGGBB or #RRGGBB.
 func ColorFromString(colorCode string) (color.Color, error) {
 	if len(colorCode) < 6 {
 		return nil, fmt.Errorf("Invalid color code: %s", colorCode)

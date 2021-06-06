@@ -1,9 +1,9 @@
 # ch03/ex08
 
-## 性能とメモリ使用量
+## Performance and memory usage
 
-性能とメモリ使用量は、complex64 を 1 として、次のようになった。
-小さいほど良い。
+Performance and memory usage are as follows, with complex64 as 1.
+The smaller the better.
 
 ```txt
             Performance     Memory
@@ -23,16 +23,16 @@ PASS
 ok      github.com/kdama/gopl/ch03/ex08 7.639s
 ```
 
-## レンダリング結果
+## Rendering result
 
-2^15 倍の拡大では、complex64 と complex128 のレンダリング結果に違いは確認できなかった。(`examples/complex64_z15.png`, `examples/complex128_z15.png`)
-2^16 倍の拡大では、 complex64 と complex128 のレンダリング結果に違いを確認できた。(`examples/complex64_z16.png`, `examples/complex128_z16.png`)
+At 2 ^ 15x magnification, no difference was seen in the rendering results of complex64 and complex128. (`examples/complex64_z15.png`, `examples/complex128_z15.png`)
+At 2 ^ 16x magnification, we could see the difference in the rendering results of complex64 and complex128. (`examples/complex64_z16.png`, `examples/complex128_z16.png`)
 
-2^44 倍の拡大では、complex128 と big.Float のレンダリング結果に違いは確認できなかった。(`examples/complex128_z44.png`, `examples/bigfloat_z44.png`)
-2^45 倍の拡大では、complex128 と big.Float のレンダリング結果に違いを確認できた。(`examples/complex128_z45.png`, `examples/bigfloat_z45.png`)
+At 2 ^ 44x magnification, no difference was seen in the rendering results of complex128 and big.Float. (`examples/complex128_z44.png`, `examples/bigfloat_z44.png`)
+At 2 ^ 45x magnification, we could see a difference in the rendering results of complex128 and big.Float. (`examples/complex128_z45.png`, `examples/bigfloat_z45.png`)
 
-big.Float と big.Rat のレンダリング結果の差は、詳細には得られなかった。
-2^52 倍の拡大では、big.Float と big.Rat のレンダリング結果に違いは確認できなかった。(`examples/bigfloat_z52.png`, `examples/bigrat_z52.png`)
-2^53 倍の拡大では、big.Float と big.Rat のレンダリング結果に違いを確認できた。(`examples/bigfloat_z53.png`, `examples/bigrat_z53.png`)
-ただし、
-2^53 倍の拡大においては、big.Float, big.Rat ともに精度の限界を越えたような明らかに間違ったレンダリング結果が得られている。
+The difference between the rendering results of big.Float and big.Rat could not be obtained in detail.
+At 2 ^ 52x magnification, no difference was found in the rendering results of big.Float and big.Rat. (`examples/bigfloat_z52.png`, `examples/bigrat_z52.png`)
+At 2 ^ 53x magnification, we could see the difference in the rendering results of big.Float and big.Rat. (`examples/bigfloat_z53.png`, `examples/bigrat_z53.png`)
+However,
+At 2 ^ 53 times magnification, both big.Float and big.Rat gave clearly wrong rendering results that seemed to exceed the accuracy limit.

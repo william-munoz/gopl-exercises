@@ -1,16 +1,16 @@
-// Package complexrat は、big.Rat を用いて複素数を表現します。
+// Package complexrat uses big.Rat to represent complex numbers.
 package complexrat
 
 import "math/big"
 
-// ComplexRat は、big.Rat を用いて複素数を表現します。
+// ComplexRat uses big.Rat to represent complex numbers.
 type ComplexRat struct {
 	Re *big.Rat
 	Im *big.Rat
 }
 
-// AbsCompare は、複素数の絶対値を n と比較します。
-// 複素数の絶対値のほうが大きいとき、正の値を返します。
+// AbsCompare compares the absolute value of a complex number with n.
+// Returns a positive value when the absolute value of the complex is greater.
 func (c *ComplexRat) AbsCompare(n *big.Rat) int {
 	re2 := big.NewRat(0, 1).Mul(c.Re, c.Re)
 	im2 := big.NewRat(0, 1).Mul(c.Im, c.Im)
@@ -18,7 +18,7 @@ func (c *ComplexRat) AbsCompare(n *big.Rat) int {
 	return big.NewRat(0, 1).Add(re2, im2).Cmp(n2)
 }
 
-// Square は、複素数 c の自乗を返します。
+// Square returns the square of the complex number c.
 func (c *ComplexRat) Square() *ComplexRat {
 	re2 := big.NewRat(0, 1).Mul(c.Re, c.Re)
 	im2 := big.NewRat(0, 1).Mul(c.Im, c.Im)
@@ -29,7 +29,7 @@ func (c *ComplexRat) Square() *ComplexRat {
 	return c
 }
 
-// Add は、複素数 a, b の和を返します。
+// Add returns the sum of complex numbers a and b.
 func (c *ComplexRat) Add(z *ComplexRat) *ComplexRat {
 	c.Re.Add(c.Re, z.Re)
 	c.Im.Add(c.Im, z.Im)

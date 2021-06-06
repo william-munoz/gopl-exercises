@@ -1,21 +1,21 @@
-// Package bytes は、KB, MB, ..., YB までの定数を提供します。
+// Package bytes Provides constants up to KB, MB, ..., YB.
 package bytes
 
 const (
-	// KB は、キロバイトを表します。
+	// KB represents kilobytes.
 	KB = 1000
-	// MB は、メガバイトを表します。
+	// MB represents megabytes.
 	MB = KB * KB
-	// GB は、ギガバイトを表します。
+	// GB represents gigabytes.
 	GB = MB * KB
-	// TB は、テラバイトを表します。
+	// TB represents terabytes.
 	TB = GB * KB
-	// PB は、ペタバイトを表します。
+	// PB represents petabytes.
 	PB = TB * KB
-	// EB は、エクサバイトを表します。
+	// EB stands for exabyte.
 	EB = PB * KB
-	// ZB は、ゼタバイトを表します。
+	// ZB stands for zettabyte.
 	ZB = EB * KB
-	// YB は、ヨタバイトを表します。
+	// YB stands for yottabyte.
 	YB = ZB * KB
 )

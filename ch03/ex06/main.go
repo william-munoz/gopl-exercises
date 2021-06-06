@@ -1,4 +1,4 @@
-// ch03/ex06 は、スーパーサンプリングによる高画質なマンデルブロフラクタルの PNG 画像を生成します。
+// ch03 / ex06 produces high quality Mandelbrot fractal PNG images with supersampling.
 package main
 
 import (

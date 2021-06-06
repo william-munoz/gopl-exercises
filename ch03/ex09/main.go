@@ -1,8 +1,8 @@
-// ch03/ex09 は、URL からパラメータ値を読み込んで、対応するマンデルブロフラクタルの画像を生成するサーバです。
-// URL クエリを通して、以下のパラメータに対応します。
-// - x    : 中心点の x 座標
-// - y    : 中心点の y 座標
-// - zoom : 倍率 (2 ^ (zoom - 1) 倍)
+// ch03 / ex09 is a server that reads parameter values from URLs and generates images of the corresponding Mandelbrot fractals.
+// Corresponds to the following parameters through URL queries:
+// - x    : Of the center point x Coordinate
+// - y    : Of the center point y Coordinate
+// - zoom : magnification (2 ^ (zoom - 1) Times)
 package main
 
 import (
@@ -74,8 +74,8 @@ func mandelbrot(z complex128) color.Color {
 	return color.Black
 }
 
-// parseFirstFloat64OrDefault は、与えられた文字列の配列のうち最初の要素を、浮動小数点数にパースして返します。
-// パース可能な要素が 1 個もない場合は、与えられたデフォルト値を返します。
+// parseFirstFloat64OrDefault parses and returns the first element of the given array of strings to a floating point number.
+// If none of the elements can be parsed, it returns the given default value.
 func parseFirstFloat64OrDefault(array []string, defaultValue float64) float64 {
 	if len(array) < 1 {
 		return defaultValue

@@ -1,4 +1,4 @@
-// ch03/ex07 は、方程式 z^4 - 1 = 0 によるフラクタルを、その 4 つの根のどれに近づいているかによって色付けしながら描画します。
+// ch03 / ex07 draws the fractal according to the equation z ^ 4-1 = 0, coloring it according to which of its four roots it is approaching.
 package main
 
 import (

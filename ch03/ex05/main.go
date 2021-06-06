@@ -1,5 +1,5 @@
-// ch03/ex05 はマンデルブロフラクタルのフルカラーの PNG 画像を生成します。
-// 点 z が半径 2 の円を「出る」までに掛かった回数 mod 6 について、0 から順に、赤、白、緑、白、青、白、で塗ります。
+// ch03 / ex05 produces a full-color PNG image of the Mandelbrot fractal.
+// The number of times mod 6 the point z took to "exit" a circle with a radius of 2 is painted in red, white, green, white, blue, and white, starting from 0.
 package main
 
 import (

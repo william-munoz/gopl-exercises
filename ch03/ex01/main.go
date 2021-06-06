@@ -1,5 +1,5 @@
-// ch03/ex01 は、不正なポリゴンをスキップしながら、3-D 面の関数の SVG レンダリングを計算します。
-// 関数 f の実装は、無限大の値や NaN をより頻繁に返すことがあるように変更されています。
+// ch03 / ex01 calculates the SVG rendering of the 3-D plane function, skipping the bad polygons.
+// The implementation of the function f has been modified to return infinite values and NaNs more often.
 package main
 
 import (
@@ -29,7 +29,7 @@ func main() {
 			cx, cy := corner(i, j+1)
 			dx, dy := corner(i+1, j+1)
 
-			// 出力する前に、全ての値が有限かどうかを調べます。
+			// Check if all values are finite before printing.
 			if isFinite(ax) && isFinite(ay) &&
 				isFinite(bx) && isFinite(by) &&
 				isFinite(cx) && isFinite(cy) &&
@@ -59,7 +59,7 @@ func corner(i, j int) (float64, float64) {
 func f(x, y float64) float64 {
 	r := math.Hypot(x, y) // distance from (0,0)
 
-	// 動作確認のために、r がある範囲のとき、無限大の値や NaN を返します。
+	// To check the operation, when r is in a certain range, it returns an infinite value or NaN.
 	if r >= 10 && r < 12 {
 		return math.Inf(0)
 	}
@@ -73,7 +73,7 @@ func f(x, y float64) float64 {
 	return math.Sin(r) / r
 }
 
-// isFinite は、f が有限の値かどうかを返します。
+// isFinite returns whether f is a finite value.
 func isFinite(f float64) bool {
 	if math.IsInf(f, 0) {
 		return false

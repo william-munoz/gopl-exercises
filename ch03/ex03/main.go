@@ -1,5 +1,5 @@
-// ch03/ex03 は、高さに基づいて個々のポリゴンに色を付けながら、3-D 面の関数の SVG レンダリングを計算します。
-// 頂点が赤となり、谷が青となるように、色付けします。
+// ch03 / ex03 calculates the SVG rendering of the 3-D plane function, coloring the individual polygons based on their height.
+// Color the vertices so that they are red and the valleys are blue.
 package main
 
 import (
@@ -33,7 +33,7 @@ func main() {
 			dx, dy := corner(i+1, j+1)
 			color := getColor(getHeight(i, j), maxHeight, minHeight)
 
-			// 出力する前に、全ての値が有限かどうかを調べます。
+			// Check if all values are finite before printing.
 			if isFinite(ax) && isFinite(ay) &&
 				isFinite(bx) && isFinite(by) &&
 				isFinite(cx) && isFinite(cy) &&
@@ -65,7 +65,7 @@ func f(x, y float64) float64 {
 	return math.Sin(r) / r
 }
 
-// isFinite は、f が有限の値かどうかを返します。
+// isFinite returns whether f is a finite value.
 func isFinite(f float64) bool {
 	if math.IsInf(f, 0) {
 		return false
@@ -76,7 +76,7 @@ func isFinite(f float64) bool {
 	return true
 }
 
-// getHeight は、ポリゴンの高さを計算します。
+// getHeight calculates the height of the polygon.
 func getHeight(i, j int) float64 {
 	// Find point (x,y) at corner of cell (i,j).
 	x := xyrange * (float64(i)/cells - 0.5)
@@ -86,7 +86,7 @@ func getHeight(i, j int) float64 {
 	return f(x, y)
 }
 
-// getMaxMinHeight は、全てのポリゴンの高さを求めて、高さの最大値と最小値を返します。
+// getMaxMinHeight finds the heights of all polygons and returns the maximum and minimum heights.
 func getMaxMinHeight() (float64, float64) {
 	maxHeight := math.NaN()
 	minHeight := math.NaN()
@@ -109,8 +109,8 @@ func getMaxMinHeight() (float64, float64) {
 	return maxHeight, minHeight
 }
 
-// getColor は、対象のポリゴンの高さから、ポリゴンの色を計算して、#RRGGBB 形式の文字列を返します。
-// 計算には、対象のポリゴンの高さと、全てのポリゴンの高さの最大値と最小値を利用します。
+// getColor calculates the polygon color from the height of the target polygon and returns a string in #RRGGBB format.
+// The calculation uses the height of the target polygon and the maximum and minimum values of the heights of all polygons.
 func getColor(height, maxHeight, minHeight float64) string {
 	if !isFinite(height) || !isFinite(maxHeight) || !isFinite(minHeight) {
 		return "#0000FF"

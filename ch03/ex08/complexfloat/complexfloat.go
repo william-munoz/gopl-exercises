@@ -1,17 +1,17 @@
-// Package complexfloat は、big.Float を用いて複素数を表現します。
+// Package complexfloat uses big.Float to represent complex numbers.
 package complexfloat
 
 import "math/big"
 
-// ComplexFloat は、big.Float を用いて複素数を表現します。
+// ComplexFloat uses big.Float to represent complex numbers.
 type ComplexFloat struct {
 	Re   *big.Float
 	Im   *big.Float
 	Prec uint
 }
 
-// AbsCompare は、複素数の絶対値を n と比較します。
-// 複素数の絶対値のほうが大きいとき、正の値を返します。
+// AbsCompare compares the absolute value of a complex number with n.
+// Returns a positive value when the absolute value of the complex is greater.
 func (c *ComplexFloat) AbsCompare(n *big.Float) int {
 	re2 := big.NewFloat(0).SetPrec(c.Prec).Mul(c.Re, c.Re)
 	im2 := big.NewFloat(0).SetPrec(c.Prec).Mul(c.Im, c.Im)
@@ -19,7 +19,7 @@ func (c *ComplexFloat) AbsCompare(n *big.Float) int {
 	return big.NewFloat(0).SetPrec(c.Prec).Add(re2, im2).Cmp(n2)
 }
 
-// Square は、複素数の自乗を返します。
+// Square returns the square of the complex number.
 func (c *ComplexFloat) Square() *ComplexFloat {
 	re2 := big.NewFloat(0).SetPrec(c.Prec).Mul(c.Re, c.Re)
 	im2 := big.NewFloat(0).SetPrec(c.Prec).Mul(c.Im, c.Im)
@@ -30,7 +30,7 @@ func (c *ComplexFloat) Square() *ComplexFloat {
 	return c
 }
 
-// Add は、複素数 z との和を返します。
+// Add returns the sum with the complex number z.
 func (c *ComplexFloat) Add(z *ComplexFloat) *ComplexFloat {
 	c.Re.Add(c.Re, z.Re)
 	c.Im.Add(c.Im, z.Im)

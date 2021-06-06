@@ -1,5 +1,5 @@
-// ch03/ex02 は、鶏卵の箱のようなものの SVG レンダリングを計算します。
-// 計算には、式 z = pow(2, sin(y)) * pow(2, sin(x)) / 12 を用います。
+// ch03 / ex02 calculates the SVG rendering of something like a chicken egg box.
+// The formula z = pow (2, sin (y)) * pow (2, sin (x)) / 12 is used for the calculation.
 package main
 
 import (
@@ -29,7 +29,7 @@ func main() {
 			cx, cy := corner(i, j+1)
 			dx, dy := corner(i+1, j+1)
 
-			// 出力する前に、全ての値が有限かどうかを調べます。
+			// Check if all values are finite before printing.
 			if isFinite(ax) && isFinite(ay) &&
 				isFinite(bx) && isFinite(by) &&
 				isFinite(cx) && isFinite(cy) &&
@@ -60,7 +60,7 @@ func f(x, y float64) float64 {
 	return math.Pow(2, math.Sin(y)) * math.Pow(2, math.Sin(x)) / 12
 }
 
-// isFinite は、f が有限の値かどうかを返します。
+// isFinite returns whether f is a finite value.
 func isFinite(f float64) bool {
 	if math.IsInf(f, 0) {
 		return false

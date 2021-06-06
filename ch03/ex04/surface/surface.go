@@ -1,4 +1,4 @@
-// Package surface は、高さに基づいて個々のポリゴンに色を付けながら、3-D 面の関数の SVG レンダリングを計算します。
+// The Package surface calculates the SVG rendering of the 3-D surface function, coloring the individual polygons based on their height.
 package surface
 
 import (
@@ -11,7 +11,7 @@ import (
 	"github.com/kdama/gopl/ch03/ex04/floats"
 )
 
-// Render は 3-D 面の関数の SVG レンダリングの結果を返します。
+// Render returns the result of SVG rendering of the 3-D plane function.
 func Render(w io.Writer, width, height, cells int, xyrange, xyscale, zscale, angle float64, topColor, bottomColor color.Color) {
 	fmt.Fprintf(w, "<svg xmlns='http://www.w3.org/2000/svg' "+
 		"style='stroke: grey; fill: white; stroke-width: 0.7' "+
@@ -27,7 +27,7 @@ func Render(w io.Writer, width, height, cells int, xyrange, xyscale, zscale, ang
 			dx, dy := corner(i+1, j+1, width, height, cells, xyrange, xyscale, zscale, angle)
 			color := getColor(getHeight(i, j, cells, xyrange), maxHeight, minHeight, topColor, bottomColor)
 
-			// 出力する前に、全ての値が有限かどうかを調べます。
+			// Check if all values are finite before printing.
 			if floats.IsFinite(ax) && floats.IsFinite(ay) &&
 				floats.IsFinite(bx) && floats.IsFinite(by) &&
 				floats.IsFinite(cx) && floats.IsFinite(cy) &&
@@ -59,7 +59,7 @@ func f(x, y float64) float64 {
 	return math.Sin(r) / r
 }
 
-// getHeight は、ポリゴンの高さを計算します。
+// getHeight calculates the height of the polygon.
 func getHeight(i, j, cells int, xyrange float64) float64 {
 	// Find point (x,y) at corner of cell (i,j).
 	x := xyrange * (float64(i)/float64(cells) - 0.5)
@@ -69,7 +69,7 @@ func getHeight(i, j, cells int, xyrange float64) float64 {
 	return f(x, y)
 }
 
-// getMaxMinHeight は、全てのポリゴンの高さを求めて、高さの最大値と最小値を返します。
+// getMaxMinHeight finds the heights of all polygons and returns the maximum and minimum heights.
 func getMaxMinHeight(cells int, xyrange float64) (float64, float64) {
 	maxHeight := math.NaN()
 	minHeight := math.NaN()
@@ -92,8 +92,8 @@ func getMaxMinHeight(cells int, xyrange float64) (float64, float64) {
 	return maxHeight, minHeight
 }
 
-// getColor は、対象のポリゴンの高さから、ポリゴンの色を計算して、#RRGGBB 形式の文字列を返します。
-// 計算には、対象のポリゴンの高さと、全てのポリゴンの高さの最大値と最小値を利用します。
+// getColor calculates the polygon color from the height of the target polygon and returns a string in #RRGGBB format.
+// The calculation uses the height of the target polygon and the maximum and minimum values of the heights of all polygons.
 func getColor(height, maxHeight, minHeight float64, topColor, bottomColor color.Color) string {
 	if !floats.IsFinite(height) || !floats.IsFinite(maxHeight) || !floats.IsFinite(minHeight) {
 		return colors.ColorToString(bottomColor)

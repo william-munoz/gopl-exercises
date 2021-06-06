@@ -1,4 +1,4 @@
-// ch03/ex11 は、符号記号を持つ浮動小数点数文字列にカンマを挿入します。
+// ch03 / ex11 inserts a comma in a floating point string with a sign.
 package main
 
 import (
@@ -13,7 +13,7 @@ func main() {
 	}
 }
 
-// commaSigned は、符号記号を持つ浮動小数点数文字列にカンマを挿入します。
+// commaSigned inserts a comma in a floating-point number string with a sign.
 func commaSigned(s string) string {
 	var start, end int
 
@@ -32,7 +32,7 @@ func commaSigned(s string) string {
 	return s[:start] + comma(s[start:end]) + s[end:]
 }
 
-// comma は、文字列にカンマを挿入します。
+// comma inserts a comma in the string.
 func comma(s string) string {
 	n := len(s)
 	if n <= 3 {

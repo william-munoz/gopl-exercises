@@ -1,4 +1,4 @@
-// ch03/ex12 は、2 つの文字列が互いにアナグラムになっているかどうかを報告します。
+// ch03 / ex12 reports whether the two strings are anagrams to each other.
 package main
 
 import (
@@ -14,7 +14,7 @@ func main() {
 	fmt.Printf("%t\n", anagram(os.Args[1], os.Args[2]))
 }
 
-// anagram は、文字列 a, b が互いにアナグラムになっているかどうかを返します。
+// anagram returns whether the strings a and b are anagrams of each other.
 func anagram(a, b string) bool {
 	return equals(runeOccurrences(a), runeOccurrences(b))
 }

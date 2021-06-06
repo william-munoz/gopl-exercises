@@ -1,5 +1,5 @@
-// ch03/ex08 は、complex64, complex128, big.Float, big.Rat のいずれかによって、マンデルブロフラクタルをレンダリングします。
-// 例: go run main.go -x -2 -zoom 15 -type complex64 > out/complex64_z15.png
+// ch03 / ex08 renders a Mandelbrot fractal with one of complex64, complex128, big.Float, big.Rat.
+// Example: go run main.go -x -2 -zoom 15 -type complex64 > out/complex64_z15.png
 package main
 
 import (
