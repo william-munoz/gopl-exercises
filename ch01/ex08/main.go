@@ -1,4 +1,6 @@
-// ex08 Displays what is in the URL.
+// Exercise 1.8: Modify fetch to add the prefix http:// to each argument URL if it is missing.
+// You might want to use strings.HasPrefix.
+// Displays what is in the URL.
 // URL If does not have the prefix http://, add it before retrieving the content.
 package main
 

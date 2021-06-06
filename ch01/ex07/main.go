@@ -1,4 +1,7 @@
-// ex07 Uses io.Copy to display the contents of the URL.
+// Exercise 1.7: The funcion call io.Copy(dst, src) reads from src and writes to dst. Use it
+// instead of ioutil.ReadAll to copy the response body to os.Stdout without requiring a
+// buffer large enough to hold the entire stream. Be sure to check the error result of io.Copy.
+// Uses io.Copy to display the contents of the URL.
 package main
 
 import (

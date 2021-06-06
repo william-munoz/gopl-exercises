@@ -1,4 +1,5 @@
-// ex04 Displays the number of lines that appear more than once in a standard input or specified file and their text.
+// Exercise 1.4: Modify dup2 to print the names of all files in which each duplicated line occurs.
+// Displays the number of lines that appear more than once in a standard input or specified file and their text.
 // If a file is specified, all filenames that contained each of the duplicate lines will be displayed.
 package main
 

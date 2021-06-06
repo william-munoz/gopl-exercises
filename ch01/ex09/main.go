@@ -1,4 +1,5 @@
-// ex09 Displays what is in the URL and the HTTP status code.
+// Exercise 1.9: Modify fetch to also print the HTTP status code, found in resp.Status.
+// Displays what is in the URL and the HTTP status code.
 package main
 
 import (

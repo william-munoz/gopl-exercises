@@ -1,4 +1,7 @@
-// ex06 Generates a GIF animation of a Lissajous figure with a grayscale gradient.
+// Exercise 1.6: Modify the Lissajous program to produce images in multiple colors by adding
+// more values to palette and then displaying them by changing the third argument of SetColorIndex
+// in some interesting way.
+// Generates a GIF animation of a Lissajous figure with a grayscale gradient.
 package main
 
 import (

@@ -1,4 +1,5 @@
-// ex02 Displays the index/value pairs of individual command line arguments line by line.
+// Exercise 1.2: Modify the echo program to also print the index and value of each of its arguments, one per line.
+// Displays the index/value pairs of individual command line arguments line by line.
 package main
 
 import (

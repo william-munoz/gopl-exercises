@@ -1,4 +1,8 @@
-// ex10 Will retrieve the URLs in parallel and display the time and size twice.
+// Exercise 1.10: Find a web site that produces a large amount of data. Investigate caching by
+// running fetchall twice in succession to see whether the reported time changes much. Do
+// you get the same content each time? Modify fetchall to print its output to a file so it can be
+// examined.
+// Will retrieve the URLs in parallel and display the time and size twice.
 // It also saves the contents obtained by the extraction to a file.
 package main
 
