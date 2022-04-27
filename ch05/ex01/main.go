@@ -1,5 +1,5 @@
-// ch05/ex01 は、標準入力から読み込まれた HTML ドキュメント内のリンクを表示します。
-// ループの代わりに visit への再帰呼び出しを使って n.FirstChild リンクリストを走査します。
+// ch05 / ex01 displays the links in the HTML document read from the standard input.
+// Scan the n.FirstChild linked list with a recursive call to visit instead of a loop.
 package main
 
 import (
