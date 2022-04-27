@@ -7,7 +7,7 @@ import (
 
 	"strconv"
 
-	"github.com/kdama/gopl/ch03/ex04/floats"
+	"github.com/williammunozr/gopl-exercises/ch03/ex04/floats"
 )
 
 // GetIntermediateColor returns the color between color0 and color1 that corresponds to the value of n (0 <= n <= 1).

@@ -30,5 +30,5 @@ BenchmarkRender262144-8    	      10	 119073810 ns/op
 BenchmarkRender524288-8    	      10	 177685530 ns/op
 BenchmarkRender1048576-8   	       5	 316363260 ns/op
 PASS
-ok  	github.com/kdama/gopl/ch08/ex05	35.321s
+ok  	github.com/williammunozr/gopl-exercises/ch08/ex05	35.321s
 ```

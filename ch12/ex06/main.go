@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/kdama/gopl/ch12/ex06/sexpr"
+	"github.com/williammunozr/gopl-exercises/ch12/ex06/sexpr"
 )
 
 func main() {

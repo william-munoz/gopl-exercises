@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/kdama/gopl/ch09/ex02/popcount"
+	"github.com/williammunozr/gopl-exercises/ch09/ex02/popcount"
 )
 
 func main() {

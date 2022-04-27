@@ -10,7 +10,7 @@ import (
 
 	"strconv"
 
-	"github.com/kdama/gopl/ch07/ex15/eval"
+	"github.com/williammunozr/gopl-exercises/ch07/ex15/eval"
 )
 
 func main() {

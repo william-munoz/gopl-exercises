@@ -4,7 +4,7 @@ import (
 	"archive/zip"
 	"os"
 
-	"github.com/kdama/gopl/ch10/ex02/archive"
+	"github.com/williammunozr/gopl-exercises/ch10/ex02/archive"
 )
 
 func list(f *os.File) ([]archive.FileHeader, error) {

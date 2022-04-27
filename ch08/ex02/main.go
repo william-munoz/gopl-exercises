@@ -8,7 +8,7 @@ import (
 	"net"
 	"path/filepath"
 
-	"github.com/kdama/gopl/ch08/ex02/ftp"
+	"github.com/williammunozr/gopl-exercises/ch08/ex02/ftp"
 )
 
 var port int

@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/kdama/gopl/ch13/ex04/bzip"
+	"github.com/williammunozr/gopl-exercises/ch13/ex04/bzip"
 )
 
 func main() {

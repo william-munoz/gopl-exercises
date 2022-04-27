@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/kdama/gopl/ch08/ex07/crawl"
+	"github.com/williammunozr/gopl-exercises/ch08/ex07/crawl"
 )
 
 // Response は、URL の内容を取得する処理の結果を表します。

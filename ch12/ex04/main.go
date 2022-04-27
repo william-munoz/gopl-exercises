@@ -6,7 +6,7 @@ import (
 	"log"
 	"math"
 
-	"github.com/kdama/gopl/ch12/ex04/sexpr"
+	"github.com/williammunozr/gopl-exercises/ch12/ex04/sexpr"
 )
 
 func main() {

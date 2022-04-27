@@ -4,7 +4,7 @@ package main
 import (
 	"os"
 
-	"github.com/kdama/gopl/ch08/ex07/crawl"
+	"github.com/williammunozr/gopl-exercises/ch08/ex07/crawl"
 )
 
 // out は、ページの複製の保存先となるローカルディスク上のディレクトリです。

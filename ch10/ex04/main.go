@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/kdama/gopl/ch10/ex04/golist"
+	"github.com/williammunozr/gopl-exercises/ch10/ex04/golist"
 )
 
 func main() {

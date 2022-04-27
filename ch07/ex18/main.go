@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/kdama/gopl/ch07/ex18/xmlnode"
+	"github.com/williammunozr/gopl-exercises/ch07/ex18/xmlnode"
 )
 
 func main() {

@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"sort"
 
-	"github.com/kdama/gopl/ch07/ex08/sorting"
+	"github.com/williammunozr/gopl-exercises/ch07/ex08/sorting"
 )
 
 // printTracks は、曲のスライスを、HTML の表として表示します。

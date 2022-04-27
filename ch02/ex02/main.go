@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kdama/gopl/ch02/ex02/conv"
+	"github.com/williammunozr/gopl-exercises/ch02/ex02/conv"
 )
 
 func main() {

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kdama/gopl/ch08/ex01/client/console"
+	"github.com/williammunozr/gopl-exercises/ch08/ex01/client/console"
 )
 
 // Server は、時刻を報告するサーバーです。

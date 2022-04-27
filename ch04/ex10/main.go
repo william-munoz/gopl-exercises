@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/kdama/gopl/ch04/ex10/github"
+	"github.com/williammunozr/gopl-exercises/ch04/ex10/github"
 )
 
 func main() {

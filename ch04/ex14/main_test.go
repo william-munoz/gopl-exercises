@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/kdama/gopl/ch04/ex14/github"
+	"github.com/williammunozr/gopl-exercises/ch04/ex14/github"
 )
 
 func TestAppendMilestoneAsSet(t *testing.T) {

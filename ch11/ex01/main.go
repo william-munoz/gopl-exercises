@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kdama/gopl/ch11/ex01/charcount"
+	"github.com/williammunozr/gopl-exercises/ch11/ex01/charcount"
 )
 
 func main() {

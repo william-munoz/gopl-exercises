@@ -8,7 +8,7 @@ import (
 	"math/cmplx"
 	"os"
 
-	"github.com/kdama/gopl/ch03/ex06/colors"
+	"github.com/williammunozr/gopl-exercises/ch03/ex06/colors"
 )
 
 func main() {

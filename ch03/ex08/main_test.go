@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/kdama/gopl/ch03/ex08/complexfloat"
-	"github.com/kdama/gopl/ch03/ex08/complexrat"
+	"github.com/williammunozr/gopl-exercises/ch03/ex08/complexfloat"
+	"github.com/williammunozr/gopl-exercises/ch03/ex08/complexrat"
 )
 
 func BenchmarkMandelbrotComplex64(b *testing.B) {

@@ -32,7 +32,7 @@ BenchmarkRender262144  	       1	1373965478 ns/op
 BenchmarkRender524288  	       1	1560809903 ns/op
 BenchmarkRender1048576 	       1	2608771388 ns/op
 PASS
-ok  	github.com/kdama/gopl/ch09/ex06	43.381s
+ok  	github.com/williammunozr/gopl-exercises/ch09/ex06	43.381s
 ```
 
 ## GOMAXPROCS=2
@@ -60,7 +60,7 @@ BenchmarkRender262144-2    	       1	2868075135 ns/op
 BenchmarkRender524288-2    	       1	1427782443 ns/op
 BenchmarkRender1048576-2   	       1	1873798345 ns/op
 PASS
-ok  	github.com/kdama/gopl/ch09/ex06	50.297s
+ok  	github.com/williammunozr/gopl-exercises/ch09/ex06	50.297s
 ```
 
 ## GOMAXPROCS=4
@@ -88,7 +88,7 @@ BenchmarkRender262144-4    	       1	1664215512 ns/op
 BenchmarkRender524288-4    	       1	1000732538 ns/op
 BenchmarkRender1048576-4   	       1	1369003732 ns/op
 PASS
-ok  	github.com/kdama/gopl/ch09/ex06	48.261s
+ok  	github.com/williammunozr/gopl-exercises/ch09/ex06	48.261s
 ```
 
 ## GOMAXPROCS=8
@@ -116,5 +116,5 @@ BenchmarkRender262144-8    	       2	 688765860 ns/op
 BenchmarkRender524288-8    	       2	1124110787 ns/op
 BenchmarkRender1048576-8   	       1	1584840678 ns/op
 PASS
-ok  	github.com/kdama/gopl/ch09/ex06	49.059s
+ok  	github.com/williammunozr/gopl-exercises/ch09/ex06	49.059s
 ```

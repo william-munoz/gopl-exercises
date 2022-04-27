@@ -6,7 +6,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/kdama/gopl/ch07/ex07/tempconv"
+	"github.com/williammunozr/gopl-exercises/ch07/ex07/tempconv"
 )
 
 var temp = tempconv.CelsiusFlag("temp", 20.0, "the temperature")

@@ -7,8 +7,8 @@ import (
 	"io"
 	"math"
 
-	"github.com/kdama/gopl/ch03/ex04/colors"
-	"github.com/kdama/gopl/ch03/ex04/floats"
+	"github.com/williammunozr/gopl-exercises/ch03/ex04/colors"
+	"github.com/williammunozr/gopl-exercises/ch03/ex04/floats"
 )
 
 // Render returns the result of SVG rendering of the 3-D plane function.

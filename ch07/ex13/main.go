@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/kdama/gopl/ch07/ex13/eval"
+	"github.com/williammunozr/gopl-exercises/ch07/ex13/eval"
 )
 
 func main() {

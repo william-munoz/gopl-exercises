@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/kdama/gopl/ch05/ex07/prettyhtml"
+	"github.com/williammunozr/gopl-exercises/ch05/ex07/prettyhtml"
 	"golang.org/x/net/html"
 )
 

@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/kdama/gopl/ch12/ex01/display"
+	"github.com/williammunozr/gopl-exercises/ch12/ex01/display"
 )
 
 func main() {

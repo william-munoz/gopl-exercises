@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/kdama/gopl/ch09/ex01/bank"
+	"github.com/williammunozr/gopl-exercises/ch09/ex01/bank"
 )
 
 func main() {

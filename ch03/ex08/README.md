@@ -20,7 +20,7 @@ BenchmarkMandelbrotComplex128-4           100000             16400 ns/op        
 BenchmarkMandelbrotBigFloat-4               1000           1746090 ns/op          991200 B/op      11827 allocs/op
 BenchmarkMandelbrotBigRat-4                  500           3087937 ns/op         1676161 B/op      36621 allocs/op
 PASS
-ok      github.com/kdama/gopl/ch03/ex08 7.639s
+ok      github.com/williammunozr/gopl-exercises/ch03/ex08 7.639s
 ```
 
 ## Rendering result

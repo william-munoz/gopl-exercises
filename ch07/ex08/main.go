@@ -5,7 +5,7 @@ import (
 	"os"
 	"sort"
 
-	"github.com/kdama/gopl/ch07/ex08/sorting"
+	"github.com/williammunozr/gopl-exercises/ch07/ex08/sorting"
 )
 
 var tracks = []*sorting.Track{

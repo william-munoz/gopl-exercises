@@ -10,9 +10,9 @@ import (
 
 	"log"
 
-	"github.com/kdama/gopl/ch10/ex02/archive"
-	_ "github.com/kdama/gopl/ch10/ex02/archive/tar"
-	_ "github.com/kdama/gopl/ch10/ex02/archive/zip"
+	"github.com/williammunozr/gopl-exercises/ch10/ex02/archive"
+	_ "github.com/williammunozr/gopl-exercises/ch10/ex02/archive/tar"
+	_ "github.com/williammunozr/gopl-exercises/ch10/ex02/archive/zip"
 )
 
 func main() {

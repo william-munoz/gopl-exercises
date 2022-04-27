@@ -10,7 +10,7 @@ import (
 
 	"io/ioutil"
 
-	"github.com/kdama/gopl/ch04/ex12/xkcd"
+	"github.com/williammunozr/gopl-exercises/ch04/ex12/xkcd"
 )
 
 const (

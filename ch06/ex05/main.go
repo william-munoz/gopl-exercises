@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/kdama/gopl/ch06/ex05/intset"
+	"github.com/williammunozr/gopl-exercises/ch06/ex05/intset"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package intsetbench
 import (
 	"testing"
 
-	impl "github.com/kdama/gopl/ch11/ex02/bitset32"
+	impl "github.com/williammunozr/gopl-exercises/ch11/ex02/bitset32"
 )
 
 func BenchmarkBitSet32Add(b *testing.B) {

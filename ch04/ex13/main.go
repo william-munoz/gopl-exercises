@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kdama/gopl/ch04/ex13/omdb"
+	"github.com/williammunozr/gopl-exercises/ch04/ex13/omdb"
 )
 
 func main() {

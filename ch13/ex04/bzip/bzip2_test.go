@@ -6,7 +6,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/kdama/gopl/ch13/ex04/bzip" // writer
+	"github.com/williammunozr/gopl-exercises/ch13/ex04/bzip" // writer
 )
 
 func TestBzip2(t *testing.T) {

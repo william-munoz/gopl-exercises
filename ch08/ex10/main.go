@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/kdama/gopl/ch08/ex10/links"
+	"github.com/williammunozr/gopl-exercises/ch08/ex10/links"
 )
 
 var cancel = make(chan struct{})

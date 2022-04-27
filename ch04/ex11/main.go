@@ -8,8 +8,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/kdama/gopl/ch04/ex11/editor"
-	"github.com/kdama/gopl/ch04/ex11/github"
+	"github.com/williammunozr/gopl-exercises/ch04/ex11/editor"
+	"github.com/williammunozr/gopl-exercises/ch04/ex11/github"
 )
 
 const usage = `usage:

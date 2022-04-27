@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/kdama/gopl/ch04/ex14/github"
+	"github.com/williammunozr/gopl-exercises/ch04/ex14/github"
 )
 
 var navigation = `

@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kdama/gopl/ch02/ex02/lengthconv"
-	"github.com/kdama/gopl/ch02/ex02/massconv"
-	"github.com/kdama/gopl/ch02/ex02/tempconv"
+	"github.com/williammunozr/gopl-exercises/ch02/ex02/lengthconv"
+	"github.com/williammunozr/gopl-exercises/ch02/ex02/massconv"
+	"github.com/williammunozr/gopl-exercises/ch02/ex02/tempconv"
 )
 
 // Parse interprets a given string of values and their units and returns the values and units.
