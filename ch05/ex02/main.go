@@ -1,4 +1,4 @@
-// ch05/ex02 は、HTML ドキュメントツリー内の各要素の数を出力します。
+// ch05 / ex02 outputs the number of each element in the HTML document tree.
 package main
 
 import (
@@ -19,7 +19,7 @@ func main() {
 	}
 }
 
-// visit は、ノードを走査して、各要素の数を出力します。
+// visit scans the node and outputs the number of each element.
 func visit(counts map[string]int, n *html.Node) map[string]int {
 	if n == nil {
 		return counts
