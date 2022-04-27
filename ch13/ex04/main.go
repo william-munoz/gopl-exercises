@@ -1,4 +1,4 @@
-// ch13/ex04 は、Go による純粋な bzip 圧縮ツールです。
+// ch13 / ex04 is a pure bzip compression tool by Go.
 package main
 
 import (

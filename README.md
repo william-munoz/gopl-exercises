@@ -1,3 +1,3 @@
-# gopl
+# The Go Programming Language
 
-Exercise of "The Go Programming Language"
+Exercises of "The Go Programming Language"

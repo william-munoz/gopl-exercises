@@ -1,4 +1,4 @@
-// ch13/ex03 は、C ライブラリを利用する bzip 圧縮ツールです。
+// ch13 / ex03 is a bzip compression tool that utilizes the C library.
 package main
 
 import (

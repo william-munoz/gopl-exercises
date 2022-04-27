@@ -1,4 +1,4 @@
-// Package cycle は、循環構造を持つかどうかを報告します。
+// The Package cycle reports whether it has a circular structure.
 package cycle
 
 import (
@@ -50,7 +50,7 @@ func cycle(x reflect.Value, seen map[comparison]bool) bool {
 	}
 }
 
-// Cycle は、循環構造を持つかどうかを報告します。
+// Cycle reports whether it has a circular structure.
 func Cycle(x interface{}) bool {
 	seen := make(map[comparison]bool)
 	return cycle(reflect.ValueOf(x), seen)

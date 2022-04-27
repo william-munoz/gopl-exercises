@@ -1,4 +1,4 @@
-// Package bzip は、bzip2 圧縮を使うライターを提供します。
+// Package bzip provides a writer that uses bzip2 compression.
 package bzip
 
 import (
