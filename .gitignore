@@ -22,7 +22,7 @@
 # macOS
 # ================================================================
 
-# General
+# General Files and Directories
 *.DS_Store
 .AppleDouble
 .LSOverride
