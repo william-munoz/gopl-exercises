@@ -1,4 +1,4 @@
-// ch04/ex08 は、Unicode 分類に従って文字や数字などを数えます。
+// ch04 / ex08 counts letters and numbers according to Unicode classification.
 package main
 
 import (

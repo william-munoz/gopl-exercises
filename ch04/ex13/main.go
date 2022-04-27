@@ -1,4 +1,4 @@
-// ch04/ex13 は、Open Movie Database から映画のポスター画像を取得します。
+// ch04 / ex13 gets the movie poster image from the Open Movie Database.
 package main
 
 import (

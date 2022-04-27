@@ -1,4 +1,4 @@
-// Package editor は、外部エディタによるデータ操作を提供します。
+// The Package editor provides data manipulation with an external editor.
 package editor
 
 import (
@@ -9,7 +9,7 @@ import (
 	"os/exec"
 )
 
-// Edit は、外部エディタを起動し、ユーザーに value を編集させます。
+// Edit launches an external editor and lets the user edit the value.
 func Edit(value map[string]string) error {
 	editor := getEditorName()
 
@@ -47,8 +47,8 @@ func Edit(value map[string]string) error {
 		return err
 	}
 
-	// Windows Notepad などいくつかのエディタは、UTF-8 の保存時に常に BOM を追加します。
-	// json.Unmarshal は、UTF-8 BOM が付いたデータに対応していないので、予め削除します。
+	// Some editors, such as Windows Notepad, always add a BOM when saving UTF-8.
+	// json.Unmarshal does not support data with UTF-8 BOM, so delete it beforehand.
 	err = json.Unmarshal(removeUTF8BOM(edited), &value)
 	if err != nil {
 		return err
@@ -56,23 +56,23 @@ func Edit(value map[string]string) error {
 	return nil
 }
 
-// 外部エディタの名前を取得します。
-// 外部エディタは、Git のように、環境変数 GIT_EDITOR または EDITOR で指定します。
+// Gets the name of the external editor.
+// The external editor is specified by the environment variable GIT_EDITOR or EDITOR, like Git.
 // https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables
 func getEditorName() string {
 	editor := os.Getenv("GIT_EDITOR")
 	if editor == "" {
 		editor = os.Getenv("EDITOR")
 	}
-	// vi は、ほとんど全ての Linux ディストリビューションに含まれるので、
-	// 外部エディタが指定されなかった場合は vi を起動します。
+	// vi is included in almost all Linux distributions, so
+	// If no external editor is specified, start vi.
 	if editor == "" {
 		editor = "vi"
 	}
 	return editor
 }
 
-// removeUTF8BOM は、バイト列の先頭に UTF-8 BOM があった場合、それを削除します。
+// removeUTF8BOM removes any UTF-8 BOM at the beginning of the byte string.
 func removeUTF8BOM(s []byte) []byte {
 	utf8Bom := []byte{239, 187, 191}
 	return bytes.TrimPrefix(s, utf8Bom)

@@ -1,4 +1,4 @@
-// ch04/ex07 は、UTF-8 でエンコードされた文字列を逆順にします。
+// ch04 / ex07 reverses the UTF-8 encoded strings.
 package main
 
 import (
@@ -11,7 +11,7 @@ func main() {
 	fmt.Println(string(reverseUTF8([]byte(s)))) // "muspi meroL"
 }
 
-// reverseUTF8 は、UTF-8 でエンコードされた文字列を逆順にします。
+// reverseUTF8 reverses the UTF-8 encoded string.
 func reverseUTF8(b []byte) []byte {
 	for i := 0; i < len(b); {
 		_, size := utf8.DecodeRune(b[i:])

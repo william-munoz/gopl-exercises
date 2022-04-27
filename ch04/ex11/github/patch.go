@@ -1,4 +1,4 @@
-// Package github は、GitHub に対する Go の API を提供します。
+// Package github provides Go's API for GitHub.
 package github
 
 import (
@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// patchIssue は、GitHub Issue に関する書き込み操作を行います。
+// patchIssue performs write operations on GitHub Issue.
 func patchIssue(owner, repo, number string, fields map[string]string) error {
 	buf := &bytes.Buffer{}
 	encoder := json.NewEncoder(buf)
@@ -35,7 +35,7 @@ func patchIssue(owner, repo, number string, fields map[string]string) error {
 		return err
 	}
 
-	// この行よりも下の全てのパスで、resp.Body をクローズする必要があります。
+	// All paths below this line should close resp.Body.
 	resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
@@ -45,12 +45,12 @@ func patchIssue(owner, repo, number string, fields map[string]string) error {
 	return nil
 }
 
-// UpdateIssue は、GitHub Issue を更新します。
+// UpdateIssue updates the GitHub Issue.
 func UpdateIssue(owner, repo, number string, fields map[string]string) error {
 	return patchIssue(owner, repo, number, fields)
 }
 
-// ReopenIssue は、Close された GitHub Issue を再び Open します。
+// ReopenIssue reopens the closed GitHub Issue.
 func ReopenIssue(owner, repo, number string) error {
 	fields := map[string]string{
 		"state": "open",
@@ -58,7 +58,7 @@ func ReopenIssue(owner, repo, number string) error {
 	return patchIssue(owner, repo, number, fields)
 }
 
-// CloseIssue は、GitHub Issue を編集します。
+// CloseIssue edits a GitHub Issue.
 func CloseIssue(owner, repo, number string) error {
 	fields := map[string]string{
 		"state": "closed",

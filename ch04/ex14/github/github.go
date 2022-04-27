@@ -1,4 +1,4 @@
-// Package github は、GitHub に対する Go の API を提供します。
+// Package github provides Go's API for GitHub.
 package github
 
 import (
@@ -10,7 +10,7 @@ func getIssuesURL(owner, repo string) string {
 	return fmt.Sprintf("https://api.github.com/repos/%s/%s/issues?state=all", owner, repo)
 }
 
-// Issue は、GitHub Issue を表します。
+// Issue represents a GitHub Issue.
 type Issue struct {
 	Number    int
 	HTMLURL   string `json:"html_url"`
@@ -24,7 +24,7 @@ type Issue struct {
 	Milestone *Milestone
 }
 
-// User は、GitHub 上のユーザーを表します。
+// User represents a user on GitHub.
 type User struct {
 	AvatarURL string `json:"avatar_url"`
 	HTMLURL   string `json:"html_url"`
@@ -32,7 +32,7 @@ type User struct {
 	Login     string
 }
 
-// Milestone は、GitHub 上のマイルストーンを表します。
+// Milestone represents a milestone on GitHub.
 type Milestone struct {
 	Description string
 	HTMLURL     string `json:"html_url"`
@@ -41,12 +41,12 @@ type Milestone struct {
 	Title       string
 }
 
-// Equals は、与えられた User と等しいとみなしてよいかどうかを返します。
+// Equals returns whether it can be considered equal to a given User.
 func (u *User) Equals(x *User) bool {
 	return u.ID == x.ID
 }
 
-// Equals は、与えられた Milestone と等しいとみなしてよいかどうかを返します。
+// Equals returns whether it can be considered equal to a given Milestone.
 func (m *Milestone) Equals(x *Milestone) bool {
 	return m.ID == x.ID
 }

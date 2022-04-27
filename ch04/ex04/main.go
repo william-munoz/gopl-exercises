@@ -1,4 +1,4 @@
-// ch04/ex04 は、スライスの左方向への回転を、1 回のパスで行います。
+// ch04 / ex04 rotates the slice to the left in one pass.
 package main
 
 import (

@@ -1,4 +1,4 @@
-// Package omdb は、Open Movie Database に対する Go の API を提供します。
+// Package omdb provides Go's API for Open Movie Database.
 package omdb
 
 import (
@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// GetPoster は Open Movie Database から映画のポスター画像を取得して、w に書き込みます。
+// GetPoster gets a movie poster image from the Open Movie Database and writes it to w.
 func GetPoster(w io.Writer, terms []string) error {
 	movie, err := search(terms)
 	if err != nil {

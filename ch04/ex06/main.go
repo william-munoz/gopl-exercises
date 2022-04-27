@@ -1,4 +1,4 @@
-// ch04/ex06 は、隣接している Unicode スペースを 1 つの ASCII スペースに圧縮します。
+// ch04 / ex06 compresses adjacent Unicode spaces into a single ASCII space.
 package main
 
 import (
@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(string(removeDupSpace([]byte(s)))) // "1 + 1 = 2"
 }
 
-// removeDupSpace は、隣接している Unicode スペースを 1 つの ASCII スペースに圧縮します。
+// removeDupSpace compresses adjacent Unicode spaces into a single ASCII space.
 func removeDupSpace(b []byte) []byte {
 	var buf bytes.Buffer
 	for i := 0; i < len(b); {

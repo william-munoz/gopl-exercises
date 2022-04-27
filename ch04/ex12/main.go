@@ -1,4 +1,4 @@
-// ch04/ex12 は、xkcd から検索語と一致するコミックの URL と内容を表示します。
+// ch04 / ex12 displays the URL and content of the comic that matches the search term from xkcd.
 package main
 
 import (

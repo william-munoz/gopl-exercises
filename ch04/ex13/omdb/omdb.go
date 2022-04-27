@@ -1,16 +1,17 @@
-// Package omdb は、Open Movie Database に対する Go の API を提供します。
+// Package omdb provides Go's API for Open Movie Database.
 package omdb
 
-import "fmt"
-
-import "net/url"
-import "strings"
+import (
+	"fmt"
+	"net/url"
+	"strings"
+)
 
 func searchURL(terms []string) string {
 	return fmt.Sprintf("http://www.omdbapi.com/?t=%s", url.QueryEscape(strings.Join(terms, " ")))
 }
 
-// Movie は、Open Movie Database の映画情報を表します。
+// Movie represents the movie information in the Open Movie Database.
 type Movie struct {
 	Poster   string
 	Response string

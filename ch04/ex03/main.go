@@ -1,4 +1,4 @@
-// ch04/ex03 は、int 配列へのポインタを使って、直接逆順に並べ替えます。
+// ch04 / ex03 sorts directly in reverse order using a pointer to an int array.
 package main
 
 import (

@@ -1,4 +1,4 @@
-// ch04/ex05 は、隣接している重複をスライス内から除去します。
+// ch04 / ex05 removes adjacent duplicates from within the slice.
 package main
 
 import (
@@ -10,7 +10,7 @@ func main() {
 	fmt.Println(removeDup(s)) // "[A B A C]"
 }
 
-// removeDup は、隣接している重複をスライス内から除去します。
+// removeDup removes adjacent duplicates from within the slice.
 func removeDup(s []string) []string {
 	for i := 0; i < len(s)-1; {
 		if s[i] == s[i+1] {

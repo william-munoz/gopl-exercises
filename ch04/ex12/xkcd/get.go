@@ -1,4 +1,4 @@
-// Package xkcd は、xkcd に対する Go の API を提供します。
+// Package xkcd provides Go's API for xkcd.
 package xkcd
 
 import (
@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-// GetComic は xkcd からコミックを取得します。
+// GetComic gets comics from xkcd.
 func GetComic(comicID int) (*Comic, error) {
 	resp, err := http.Get(getComicURL(comicID))
 	if err != nil {

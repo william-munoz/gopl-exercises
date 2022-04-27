@@ -1,24 +1,26 @@
-// Package xkcd は、xkcd に対する Go の API を提供します。
+// Package xkcd provides Go's API for xkcd.
 package xkcd
 
-import "fmt"
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 func getComicURL(comicID int) string {
 	return fmt.Sprintf("https://xkcd.com/%s/info.0.json", strconv.Itoa(comicID))
 }
 
-// ComicIndex は、xkcd のコミックのインデックスを表します。
+// ComicIndex represents the index of xkcd comics.
 type ComicIndex struct {
 	Comics []*Comic
 }
 
-// NewComicIndex は、新しい xkcd コミックインデックスを返します。
+// NewComicIndex returns a new xkcd comic index.
 func NewComicIndex() ComicIndex {
 	return ComicIndex{[]*Comic{}}
 }
 
-// Comic は、xkcd のコミックを表します。
+// Comic stands for xkcd comics.
 type Comic struct {
 	Alt        string
 	Day        string

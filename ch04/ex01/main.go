@@ -1,4 +1,4 @@
-// ch04/ex01 は、2 つの SHA256 ハッシュで異なるビットの数を数えます。
+// ch04 / ex01 counts the number of different bits in the two SHA256 hashes.
 package main
 
 import (
@@ -23,14 +23,14 @@ func main() {
 	fmt.Printf("%d\n", sha256PopCount(os.Args[1], os.Args[2]))
 }
 
-// sha256PopCount は、文字列 a, b の SHA256 ハッシュで異なるビットの数を返します。
+// sha256PopCount returns the number of different bits in the SHA256 hash of the strings a, b.
 func sha256PopCount(a, b string) int {
 	digesta := sha256.Sum256([]byte(a))
 	digestb := sha256.Sum256([]byte(b))
 	return popCount(digesta, digestb)
 }
 
-// popCount は、x のポピュレーションカウントを返します。
+// popCount returns the population count of x.
 func popCount(a, b [32]byte) int {
 	pop := 0
 	for i := range a {

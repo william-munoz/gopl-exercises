@@ -1,11 +1,11 @@
-// Package xkcd は、xkcd に対する Go の API を提供します。
+// Package xkcd provides Go's API for xkcd.
 package xkcd
 
 import (
 	"strings"
 )
 
-// SearchComic は 検索語に関連する xkcd のコミックを返します。
+// SearchComic returns xkcd comics related to the search term.
 func SearchComic(from ComicIndex, terms []string) []*Comic {
 	result := []*Comic{}
 

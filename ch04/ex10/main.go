@@ -1,4 +1,4 @@
-// ch04/ex10 は、検索語に一致した GitHub Issue の表を、Issue が作成された期間で分類して表示します。
+// ch04 / ex10 displays a table of GitHub Issue that matches the search term, categorized by the period when the issue was created.
 package main
 
 import (
@@ -22,7 +22,7 @@ func main() {
 	beforeMonth := now.AddDate(0, -1, 0)
 	beforeYear := now.AddDate(-1, 0, 0)
 
-	// 1 か月未満に作成された Issue を報告します。
+	// Report issues created in less than a month.
 	fmt.Println("\n-- created at less than a month --")
 	for _, item := range result.Items {
 		if item.CreatedAt.After(beforeMonth) {
@@ -30,7 +30,7 @@ func main() {
 		}
 	}
 
-	// 1 か月以上 1 年未満に作成された Issue を報告します。
+	// Report issues created in more than a month and less than a year.
 	fmt.Println("\n-- created at less than a year --")
 	for _, item := range result.Items {
 		if (item.CreatedAt.Before(beforeMonth) ||
@@ -40,7 +40,7 @@ func main() {
 		}
 	}
 
-	// 1 年以上に作成された Issue を報告します。
+	// Report issues that have been created for over a year.
 	fmt.Println("\n-- created at more than a year --")
 	for _, item := range result.Items {
 		if item.CreatedAt.Before(beforeYear) ||

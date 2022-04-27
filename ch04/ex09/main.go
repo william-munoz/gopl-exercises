@@ -1,4 +1,4 @@
-// ch04/ex09 は、入力テキストファイル内のそれぞれの単語の出現頻度を報告します。
+// ch04 / ex09 reports the frequency of occurrence of each word in the input text file.
 package main
 
 import (

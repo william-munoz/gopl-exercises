@@ -1,4 +1,4 @@
-// ch04/ex11 は、コマンドラインからユーザが GitHub の Issue を作成、読み出し、更新、クローズできるツールです。
+// ch04 / ex11 is a tool that allows users to create, read, update, and close GitHub issues from the command line.
 package main
 
 import (

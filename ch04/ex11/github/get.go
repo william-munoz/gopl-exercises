@@ -1,4 +1,4 @@
-// Package github は、GitHub に対する Go の API を提供します。
+// Package github provides Go's API for GitHub.
 package github
 
 import (
@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-// GetIssue は、指定された GitHub Issue を取得します。
+// GetIssue gets the specified GitHub Issue.
 func GetIssue(owner, repo, number string) (*Issue, error) {
 	req, err := http.NewRequest("GET", getIssueURL(owner, repo, number), nil)
 	if err != nil {
@@ -20,7 +20,7 @@ func GetIssue(owner, repo, number string) (*Issue, error) {
 		return nil, err
 	}
 
-	// この行よりも下の全てのパスで、resp.Body をクローズする必要があります。
+	// All paths below this line should close resp.Body.
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {

@@ -1,4 +1,4 @@
-// ch04/ex14 は、GitHub への一度の問い合わせで、バグレポート、マイルストーン、ユーザーの一覧を閲覧可能にするウェブサーバです。
+// ch04 / ex14 is a web server that allows you to browse bug reports, milestones, and a list of users with a single contact to GitHub.
 package main
 
 import (
@@ -126,8 +126,8 @@ func handleMilestones(w http.ResponseWriter, r *http.Request) {
 	milestonesTemplate.Execute(w, milestones)
 }
 
-// appendMilestoneAsSet は、与えられたマイルストーンの配列 set に、与えられたマイルストーン milestone を追加します。
-// ただし、set が milestone を既に含んでいる場合は、milestone を追加しません。
+// appendMilestoneAsSet adds the given milestone milestone to the given milestone array set.
+// However, if set already contains milestones, do not add milestones.
 func appendMilestoneAsSet(set []github.Milestone, milestone *github.Milestone) []github.Milestone {
 	if !includesMilestone(set, milestone) {
 		return append(set, *milestone)
@@ -135,7 +135,7 @@ func appendMilestoneAsSet(set []github.Milestone, milestone *github.Milestone) [
 	return set
 }
 
-// includesMilestone は、与えられたマイルストーンの配列 array が、与えられたマイルストーン milestone を含んでいるかどうかを返します。
+// includesMilestone returns whether the array of given milestones contains the given milestone milestones.
 func includesMilestone(array []github.Milestone, milestone *github.Milestone) bool {
 	for _, value := range array {
 		if value.Equals(milestone) {
@@ -145,8 +145,8 @@ func includesMilestone(array []github.Milestone, milestone *github.Milestone) bo
 	return false
 }
 
-// appendUserAsSet は、与えられたユーザーの配列 set に、与えられたユーザー user を追加します。
-// ただし、set が user を既に含んでいる場合は、user を追加しません。
+// appendUserAsSet adds the given user user to the given user array set.
+// However, if set already contains user, do not add user.
 func appendUserAsSet(set []github.User, user *github.User) []github.User {
 	if !includesUser(set, user) {
 		return append(set, *user)
@@ -154,7 +154,7 @@ func appendUserAsSet(set []github.User, user *github.User) []github.User {
 	return set
 }
 
-// includesUser は、与えられたユーザーの配列 array が、与えられたユーザー user を含んでいるかどうかを返します。
+// includesUser returns whether the array array of given users contains the given user user.
 func includesUser(array []github.User, user *github.User) bool {
 	for _, value := range array {
 		if value.Equals(user) {

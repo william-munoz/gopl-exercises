@@ -1,4 +1,4 @@
-// Package github は、GitHub に対する Go の API を提供します。
+// Package github provides Go's API for GitHub.
 package github
 
 import (
@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// CreateIssue は、指定された GitHub 上のリポジトリに Issue を作成します。
+// CreateIssue creates an Issue in the repository on the specified GitHub.
 func CreateIssue(owner, repo string, fields map[string]string) error {
 	buf := &bytes.Buffer{}
 	err := json.NewEncoder(buf).Encode(fields)
@@ -34,7 +34,7 @@ func CreateIssue(owner, repo string, fields map[string]string) error {
 		return err
 	}
 
-	// この行よりも下の全てのパスで、resp.Body をクローズする必要があります。
+	// All paths below this line should close resp.Body.
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusCreated {

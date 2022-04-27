@@ -1,4 +1,4 @@
-// Package github は、GitHub に対する Go の API を提供します。
+// Package github provides Go's API for GitHub.
 package github
 
 import (
@@ -25,7 +25,7 @@ func setAuthorization(req *http.Request) error {
 	return nil
 }
 
-// Issue は、GitHub Issue を表します。
+// Issue represents a GitHub Issue.
 type Issue struct {
 	Number    int
 	HTMLURL   string `json:"html_url"`
@@ -38,7 +38,7 @@ type Issue struct {
 	UpdatedAt time.Time `json:"updated_at"`
 }
 
-// User は、GitHub 上のユーザーを表します。
+// User represents a user on GitHub.
 type User struct {
 	Login   string
 	HTMLURL string `json:"html_url"`
